@@ -53,12 +53,12 @@ first_block['DocID'] = first_block['DocID'].str.replace(r'\D', '', regex=True).a
 # ---------------------------------------------------------
 # --> add your Python code here
 vectorizer = CountVectorizer(stop_words='english')
-sparse_matrix = vectorizer.fit_transform(first_chunk['Text'])
+sparse_matrix = vectorizer.fit_transform(first_block['Text'])
 terms = vectorizer.get_feature_names_out()
 
 dict = {}
 coord = sparse_matrix.tocoo()
-doc_arrays = first_chunk['DocID'].values
+doc_arrays = first_block['DocID'].values
 
 for doc_idx, term_idx in zip(coord.row, coord.col):
     term = terms[term_idx]
