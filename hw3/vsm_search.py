@@ -4,7 +4,7 @@
 # SPECIFICATION: This program builds a Vector Space Model search engine
 #                   and evaluates its performance
 # FOR: CS 5180- Assignment #3
-# TIME SPENT: 
+# TIME SPENT: 2 hours
 #-----------------------------------------------------------*/
 
 # importing required libraries
